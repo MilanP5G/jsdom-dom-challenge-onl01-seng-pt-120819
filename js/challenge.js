@@ -7,13 +7,11 @@ const submit = document.getElementById('submit').addEventListener('click', submi
 const submitButton = document.getElementById('submit')
 const likes = {}
 
-
 let intervalID = setInterval(function timerCount() {
   i = parseInt(counter.innerText)
   i ++
   counter.innerText = i
 }, 1000)
-
 
 resume.addEventListener("click", function(e) {
   if (resume.innerText === 'pause'){
@@ -36,8 +34,6 @@ resume.addEventListener("click", function(e) {
         submitButton.disabled = false
  }
 })
-
-
 
 function likeNumber() {
   let number = parseInt(counter.innerText)
