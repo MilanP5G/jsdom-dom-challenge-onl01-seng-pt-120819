@@ -15,23 +15,21 @@ let intervalID = setInterval(function timerCount() {
 }, 1000)
 
 
-pause.addEventListener("click", function(e) {
-  if (pause.innerText === 'pause'){
-        pause.innerText = "resume"
+resume.addEventListener("click", function(e) {
+  if (resume.innerText === 'pause'){
+        resume.innerText = "resume"
         clearInterval(intervalID)
         plus.disabled = true
         minus.disabled = true
         heart.disabled = true
         submitButton.disabled = true
-    }
-    else {
+    } else {
         intervalID = setInterval(function timerCounter(){
             i = parseInt(counter.innerText)
             i ++
             counter.innerText = i
         }, 1000);
-        pause.innerText = "pause"
-
+        resume.innerText = "pause"
         plus.disabled = false
         minus.disabled = false
         heart.disabled = false
